@@ -13,6 +13,7 @@ namespace App.Core.Data
 
         public AppDbContext(DbContextOptions options) : base(options)
         {
+            //this.Database.Ex
         }
     }
 }
