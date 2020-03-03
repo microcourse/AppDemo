@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using App.Core.Data.Map;
 using App.Core.Domain;
 using Microsoft.EntityFrameworkCore;
 
@@ -26,11 +27,15 @@ namespace App.Core.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            /*
             modelBuilder.Entity<Device>(pc =>
             {
                 pc.HasKey(k => k.Id);
                 pc.ToTable("vw_Devices");
             });
+            */
+
+            modelBuilder.ApplyConfiguration(new DeviceMap());
 
             base.OnModelCreating(modelBuilder);
         }
