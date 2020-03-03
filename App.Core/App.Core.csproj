@@ -5,11 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Abstraction\" />
-    <Folder Include="Command\" />
-    <Folder Include="Data\Query\" />
-    <Folder Include="Domain\" />
-    <Folder Include="Query\" />
+    <Compile Remove="Command\**" />
+    <EmbeddedResource Remove="Command\**" />
+    <None Remove="Command\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\Command\" />
   </ItemGroup>
 
   <ItemGroup>
